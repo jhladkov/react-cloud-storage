@@ -8,6 +8,7 @@ import { UserEntity } from './users/entities/user.entity';
 import { FileEntity } from './files/entities/file.entity';
 import * as process from 'process';
 import { ConfigModule } from '@nestjs/config';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { ConfigModule } from '@nestjs/config';
     }),
     UsersModule,
     FilesModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
